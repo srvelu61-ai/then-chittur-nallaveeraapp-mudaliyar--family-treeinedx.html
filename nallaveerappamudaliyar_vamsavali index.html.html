@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>நல்லவீரப்ப முதலியார் வம்சாவழி</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Noto+Sans+Tamil:wght@300;400;500&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson:    #8B1A2C;
+    --rose:       #C94B6A;
+    --blush:      #F2A5B7;
+    --petal:      #FAE4EC;
+    --cream:      #FDF6F0;
+    --sand:       #E8D5C4;
+    --walnut:     #5C3A2E;
+    --bark:       #3A1F17;
+    --gold:       #C9962A;
+    --text-main:  #2E1810;
+    --text-muted: #7A4E3E;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    background: var(--cream);
+    color: var(--text-main);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--bark) 0%, var(--crimson) 45%, #6B0F20 100%);
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M40 0 L40 10 M40 70 L40 80 M0 40 L10 40 M70 40 L80 40'/%3E%3Ccircle cx='40' cy='40' r='15' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='40' cy='40' r='30' stroke='%23ffffff' stroke-width='0.3' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .mandala-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: pulse-ring 8s ease-in-out infinite;
+  }
+  .mandala-ring:nth-child(1) { width: 300px; height: 300px; animation-delay: 0s; }
+  .mandala-ring:nth-child(2) { width: 500px; height: 500px; animation-delay: 1.5s; }
+  .mandala-ring:nth-child(3) { width: 700px; height: 700px; animation-delay: 3s; }
+
+  @keyframes pulse-ring {
+    0%, 100% { opacity: 0.08; transform: scale(1); }
+    50% { opacity: 0.18; transform: scale(1.02); }
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .om-symbol {
+    font-size: 3.5rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(201,150,42,0.6);
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--blush);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .hero-meta-item {
+    text-align: center;
+  }
+
+  .hero-meta-item .num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-meta-item .lbl {
+    font-size: 0.75rem;
+    color: var(--blush);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 0.2rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,150,42,0.15);
+    border: 1px solid rgba(201,150,42,0.4);
+    color: var(--gold);
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bark);
+    border-bottom: 2px solid var(--gold);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-title {
+    font-family: 'Noto Serif Tamil', serif;
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    text-align: center;
+    padding: 3.5rem 2rem 2rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--rose);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--crimson);
+  }
+
+  .section-rule {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+    border-radius: 2px;
+    margin: 1rem auto 0;
+  }
+
+  /* ── ORIGIN SECTION ── */
+  .origin-section {
+    background: linear-gradient(180deg, var(--petal) 0%, var(--cream) 100%);
+    padding-bottom: 3rem;
+  }
+
+  .origin-card {
+    max-width: 820px;
+    margin: 0 auto 2rem;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    border-left: 4px solid var(--crimson);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 20px rgba(139,26,44,0.08);
+  }
+
+  .origin-card p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text-main);
+  }
+
+  .origin-card p + p { margin-top: 1rem; }
+
+  /* ── OVERVIEW TREE ── */
+  .overview-section {
+    padding: 0 1rem 4rem;
+    background: var(--cream);
+  }
+
+  .tree-root-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(139,26,44,0.12);
+    overflow: hidden;
+  }
+
+  .tree-root-header {
+    background: linear-gradient(135deg, var(--bark), var(--crimson));
+    padding: 1.8rem 2rem;
+    text-align: center;
+  }
+
+  .tree-root-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .tree-root-id {
+    font-size: 0.75rem;
+    color: var(--blush);
+    margin-top: 0.3rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── CHILDREN GRID ── */
+  .gen-block {
+    padding: 2rem;
+  }
+
+  .gen-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .children-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .person-chip {
+    background: var(--petal);
+    border: 1.5px solid var(--blush);
+    border-radius: 30px;
+    padding: 0.5rem 1.1rem;
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 0.9rem;
+    color: var(--crimson);
+    font-weight: 600;
+    cursor: default;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .person-chip .chip-id {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    display: block;
+    text-align: center;
+    margin-top: 0.1rem;
+    font-weight: 400;
+  }
+
+  .person-chip.has-spouse {
+    background: linear-gradient(135deg, var(--petal), #fff);
+    border-color: var(--rose);
+  }
+
+  .spouse-tag {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  /* ── GENERATION TABS ── */
+  .gen-section {
+    background: var(--cream);
+    padding: 1rem 1rem 4rem;
+  }
+
+  .gen-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+  }
+
+  .gen-tab {
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    border: 1.5px solid var(--blush);
+    background: #fff;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Noto Sans Tamil', sans-serif;
+  }
+
+  .gen-tab.active, .gen-tab:hover {
+    background: var(--crimson);
+    color: #fff;
+    border-color: var(--crimson);
+  }
+
+  .gen-content { display: none; }
+  .gen-content.active { display: block; }
+
+  /* ── FAMILY CARDS ── */
+  .family-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .family-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(139,26,44,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .family-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139,26,44,0.14);
+  }
+
+  .family-card-head {
+    background: linear-gradient(135deg, var(--crimson), var(--rose));
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .card-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .card-head-info { flex: 1; min-width: 0; }
+
+  .card-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .card-id {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+
+  .family-card-body {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .spouse-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--petal);
+  }
+
+  .spouse-icon { color: var(--rose); font-size: 0.9rem; }
+
+  .spouse-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 0.9rem;
+    color: var(--text-main);
+  }
+
+  .children-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin-bottom: 0.7rem;
+  }
+
+  .children-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .child-chip {
+    background: var(--petal);
+    border-radius: 20px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.8rem;
+    font-family: 'Noto Serif Tamil', serif;
+    color: var(--crimson);
+    border: 1px solid var(--blush);
+  }
+
+  .child-chip.daughter {
+    background: #FFF0F5;
+    border-color: #F7C5D5;
+    color: #8B1A2C;
+  }
+
+  /* ── LINEAGE TIMELINE ── */
+  .timeline-section {
+    background: linear-gradient(180deg, var(--petal) 0%, var(--cream) 100%);
+    padding: 1rem 1.5rem 4rem;
+  }
+
+  .timeline {
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.7rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--crimson), var(--blush));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.15rem;
+    top: 0.25rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--crimson);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 3px var(--rose);
+  }
+
+  .timeline-gen {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--rose);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--crimson);
+  }
+
+  .timeline-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    line-height: 1.6;
+  }
+
+  /* ── STATS ── */
+  .stats-section {
+    background: var(--bark);
+    padding: 3rem 1.5rem;
+  }
+
+  .stats-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border: 1px solid rgba(201,150,42,0.2);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-lbl {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.4rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bark);
+    border-top: 1px solid rgba(201,150,42,0.2);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.8;
+  }
+
+  footer .footer-title {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .family-grid { grid-template-columns: 1fr; }
+    .hero-meta { gap: 1.5rem; }
+    .gen-tabs { gap: 0.3rem; }
+    .gen-tab { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+  }
+
+  /* ── SEARCH ── */
+  .search-section {
+    background: var(--petal);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .search-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.9rem 1.5rem 0.9rem 3rem;
+    border-radius: 50px;
+    border: 2px solid var(--blush);
+    background: #fff;
+    font-size: 0.95rem;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-input:focus { border-color: var(--crimson); }
+
+  .search-icon {
+    position: absolute;
+    left: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+
+  #search-results {
+    max-width: 500px;
+    margin: 1rem auto 0;
+    text-align: left;
+  }
+
+  .search-result-item {
+    background: #fff;
+    border-left: 3px solid var(--crimson);
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .search-result-item .r-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-weight: 600;
+    color: var(--crimson);
+  }
+
+  .search-result-item .r-id {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+  }
+
+  /* ── ADD MEMBER SECTION ── */
+  .add-member-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--petal) 100%);
+    padding: 2rem 1.5rem 4rem;
+  }
+  .add-member-form-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(139,26,44,0.12);
+    overflow: hidden;
+  }
+  .add-member-form-header {
+    background: linear-gradient(135deg, var(--bark), var(--crimson));
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .add-member-form-header .form-icon {
+    font-size: 2rem;
+    background: rgba(255,255,255,0.15);
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .add-member-form-header h3 {
+    font-family: 'Noto Serif Tamil', serif;
+    color: #fff; font-size: 1.2rem; font-weight: 700;
+  }
+  .add-member-form-header p { color: rgba(255,255,255,0.65); font-size: 0.8rem; margin-top: 0.2rem; }
+  .add-member-form-body { padding: 2rem; }
+  .form-row { margin-bottom: 1.2rem; }
+  .form-label {
+    display: block; font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 500;
+  }
+  .form-label span.req { color: var(--crimson); }
+  .form-input, .form-select, .form-textarea {
+    width: 100%; padding: 0.75rem 1rem;
+    border: 2px solid var(--blush); border-radius: 10px;
+    font-size: 0.95rem; font-family: 'Noto Sans Tamil', sans-serif;
+    color: var(--text-main); background: #fff; outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(139,26,44,0.08);
+  }
+  .form-textarea { resize: vertical; min-height: 80px; }
+  .form-row-2col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;
+  }
+  @media (max-width: 500px) { .form-row-2col { grid-template-columns: 1fr; } }
+  .submit-btn {
+    width: 100%; padding: 0.9rem;
+    background: linear-gradient(135deg, var(--crimson), var(--rose));
+    color: #fff; border: none; border-radius: 50px;
+    font-size: 1rem; font-family: 'Noto Serif Tamil', serif; font-weight: 700;
+    cursor: pointer; letter-spacing: 0.05em;
+    transition: opacity 0.2s, transform 0.1s; margin-top: 0.5rem;
+  }
+  .submit-btn:hover { opacity: 0.9; }
+  .submit-btn:active { transform: scale(0.99); }
+  .form-success {
+    display: none; text-align: center; padding: 1.5rem;
+    background: #F0FFF4; border-radius: 12px; margin-top: 1rem;
+    border: 1.5px solid #9AE6B4;
+  }
+  .form-success .success-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .form-success p { color: #276749; font-size: 0.9rem; }
+  .registered-members-wrap { max-width: 640px; margin: 2rem auto 0; }
+  .registered-title {
+    font-family: 'Noto Serif Tamil', serif; color: var(--crimson);
+    font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;
+    border-left: 3px solid var(--rose); padding-left: 0.8rem;
+  }
+  .member-entry {
+    background: #fff; border-radius: 10px; padding: 1rem 1.2rem;
+    margin-bottom: 0.75rem; box-shadow: 0 2px 10px rgba(139,26,44,0.07);
+    display: flex; gap: 1rem; align-items: flex-start;
+    border-left: 3px solid var(--crimson);
+  }
+  .member-entry-avatar {
+    font-size: 1.5rem; background: var(--petal);
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .member-entry-info { flex: 1; }
+  .member-entry-name { font-family: 'Noto Serif Tamil', serif; font-weight: 700; color: var(--crimson); font-size: 1rem; }
+  .member-entry-meta { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; line-height: 1.6; }
+  .member-entry-note { font-size: 0.82rem; color: var(--text-main); margin-top: 0.4rem; font-style: italic; }
+  .no-members-msg {
+    text-align: center; color: var(--text-muted); font-size: 0.9rem;
+    padding: 1.5rem; background: #fff; border-radius: 10px;
+    border: 1.5px dashed var(--blush);
+  }
+
+  /* Tree Connector lines */
+  .connector-row {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    color: var(--blush);
+    font-size: 1.4rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="mandala-ring"></div>
+  <div class="mandala-ring"></div>
+  <div class="mandala-ring"></div>
+
+  <div class="hero-inner">
+    <span class="om-symbol">ௐ</span>
+    <h1>நல்லவீரப்ப முதலியார்<br>வம்சாவழி</h1>
+    <p class="hero-subtitle">Nallaveeraappa Mudaliayar Vamsavali</p>
+    <div class="hero-divider"></div>
+    <p style="color:var(--blush);font-size:0.9rem;line-height:1.8;max-width:560px;margin:0 auto;">
+      தமிழ்நாடு • கோயமுத்தூர் மாவட்டம் • ஆனைமலை வட்டம்<br>
+      தென்சித்தூர் • தொண்டை மண்டல சைவ முதன்மையார்
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="num">1923</span>
+        <span class="lbl">தொடக்க ஆண்டு</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="num">100</span>
+        <span class="lbl">ஆண்டுகள்</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="num">7+</span>
+        <span class="lbl">தலைமுறைகள்</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="num">300+</span>
+        <span class="lbl">குடும்பத்தினர்</span>
+      </div>
+    </div>
+    <div class="hero-badge">நூற்றாண்டு விழா 1923–2023</div>
+  </div>
+  <div class="scroll-hint">↓ தொடர்ந்து படிக்க</div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <span class="nav-title">நல்லவீரப்ப வம்சாவழி</span>
+  <div class="nav-links">
+    <a href="#origin">வரலாறு</a>
+    <a href="#overview">மரம்</a>
+    <a href="#generations">தலைமுறைகள்</a>
+    <a href="#search">தேடல்</a>
+    <a href="#add-member" style="color:var(--gold);font-weight:600;">✚ பெயர் சேர்க்க</a>
+    <a href="#stats">புள்ளிவிவரம்</a>
+  </div>
+</nav>
+
+<!-- ORIGIN -->
+<section class="origin-section" id="origin">
+  <div class="section-header">
+    <div class="section-eyebrow">குடும்ப வரலாறு</div>
+    <h2 class="section-title">வம்சத்தின் தோற்றம்</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="origin-card">
+    <p>
+      தமிழ்நாடு, கோயமுத்தூர் மாவட்டத்தில் ஆனைமலை வட்டத்தில் அமைந்துள்ள தென்சித்தூர் என்னும் ஊரில் தொண்டை மண்டல சைவ முதன்மையார் திருமிகு <strong>நல்லவீரப்ப முதலியார்</strong> அவர்களின் வழித்தோன்றல்களான இந்த வம்சாவழி, தமிழர் மரபுகளையும் சைவ ஆன்மீக பண்பாட்டையும் தலைமுறை தலைமுறையாக கடத்தி வருகின்றனர்.
+    </p>
+    <p>
+      நல்லவீரப்ப முதலியாருக்கு <strong>சுப்பராயன்</strong> (1-1), <strong>வெங்கடாசலம்</strong> (1-2), மற்றும் <strong>அரசூர்</strong> (1-3) என மூன்று புதல்வர்கள். வெங்கடாசலம் அவர்களுக்கு ஆறு புதல்வர்கள் — இராமசாமி, நல்ல வீரப்பன், இராமச்சந்திரன், இலட்சுமி நாராயணன், சுப்பராயன், மீனாக்ஷிசுந்தரம். இவர்களின் சந்ததிகள் இன்றும் வளர்ந்து பெருகி வருகின்றனர்.
+    </p>
+    <p>
+      கி.பி. 1700-ம் ஆண்டுகளில் பிற்பகுதியில் வாழ்ந்த நல்ல வீரப்ப முதலியாரிலிருந்து இன்று வரை தொடர்ந்து வாரிசுகள் பல்கி பெருகினாலும், நம் உறவு உறுதியாகத் தொடர்கிறது. <strong>ஸ்ரீ மீனாட்சி சுந்தரேஸ்வரர் கோவில் தர்ம பரிபாலன சபை</strong> வெளியிட்ட இந்த வம்சாவழி, 1984-ம் ஆண்டிலிருந்து தற்போது வரை புதுப்பிக்கப்பட்டுள்ளது.
+    </p>
+  </div>
+</section>
+
+<!-- OVERVIEW TREE -->
+<section class="overview-section" id="overview">
+  <div class="section-header">
+    <div class="section-eyebrow">குடும்ப மரம்</div>
+    <h2 class="section-title">வம்சாவழி கண்ணோட்டம்</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="tree-root-card">
+    <div class="tree-root-header">
+      <div class="tree-root-name">நல்லவீரப்ப முதலியார்</div>
+      <div class="tree-root-id">Nallaveeraappa Mudaliayar • மூல பூர்விகர் • குடும்ப எண்: 1</div>
+    </div>
+
+    <div class="gen-block">
+      <div class="gen-label">முதல் தலைமுறை — நேரடி புதல்வர்கள்</div>
+      <div class="children-row">
+        <div class="person-chip has-spouse">
+          சுப்பராயன்
+          <span class="chip-id">1-1</span>
+        </div>
+        <div class="person-chip has-spouse">
+          வெங்கடாசலம்
+          <span class="chip-id">1-2</span>
+        </div>
+        <div class="person-chip has-spouse">
+          அரசூர்
+          <span class="chip-id">பெ. 1-3</span>
+          <span class="spouse-tag">+ குமாரசுவாமி முதலியார்</span>
+        </div>
+      </div>
+
+      <div class="connector-row">↓</div>
+
+      <div class="gen-label">இரண்டாம் தலைமுறை — வெங்கடாசலம் (1-2) புதல்வர்கள்</div>
+      <div class="children-row">
+        <div class="person-chip">இராமசாமி <span class="chip-id">1-1-1</span></div>
+        <div class="person-chip">நல்ல வீரப்பன் <span class="chip-id">1-2-1</span></div>
+        <div class="person-chip">இராமச்சந்திரன் <span class="chip-id">1-2-2</span></div>
+        <div class="person-chip">இலட்சுமி நாராயணன் <span class="chip-id">1-2-3</span></div>
+        <div class="person-chip">சுப்பராயன் <span class="chip-id">1-2-4</span></div>
+        <div class="person-chip">மீனாக்ஷிசுந்தரம் <span class="chip-id">1-2-5</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERATIONS TAB VIEW -->
+<section class="gen-section" id="generations">
+  <div class="section-header">
+    <div class="section-eyebrow">விரிவான வம்சாவழி</div>
+    <h2 class="section-title">தலைமுறை விவரங்கள்</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="gen-tabs">
+    <button class="gen-tab active" onclick="showGen('g1')">சாகை 1-1-1 இராமசாமி</button>
+    <button class="gen-tab" onclick="showGen('g2')">சாகை 1-1-1-2 கல்யாணசுந்தரம்</button>
+    <button class="gen-tab" onclick="showGen('g3')">சாகை 1-1-1-3 முத்துசுந்தரம்</button>
+    <button class="gen-tab" onclick="showGen('g4')">சாகை 1-2-x வெங்கடாசலம்</button>
+    <button class="gen-tab" onclick="showGen('g5')">சாகை 1-1-1-1-1 இராமசாமி (நீட்சி)</button>
+  </div>
+
+  <!-- GEN 1: Ramasami branch -->
+  <div id="g1" class="gen-content active">
+    <div class="family-grid">
+      <!-- Ramasami + Angammai -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">இராமசாமி</div>
+            <div class="card-id">ID: 1-1-1 • சுப்பராயன் (1-1) மகன்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="spouse-line">
+            <span class="spouse-icon">♥</span>
+            <span class="spouse-name">அங்காத்தை (அங்கயர்ககண்ணி)</span>
+          </div>
+          <div class="children-label">புதல்வர்கள் / புதல்விகள்</div>
+          <div class="children-chips">
+            <span class="child-chip">சோமசுந்தரம் 1-1-1-1</span>
+            <span class="child-chip">கல்யாணசுந்தரம் 1-1-1-2</span>
+            <span class="child-chip">முத்துசுந்தரம் 1-1-1-3</span>
+            <span class="child-chip">நல்லவீரப்பன் 1-1-1-4</span>
+            <span class="child-chip">மருதநாயகம் 1-1-1-5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Somasundaram branch -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சோமசுந்தரம்சுந்தரம்</div>
+            <div class="card-id">ID: 1-1-1-1 + ராமாத்தாள் (A) / சொர்ணம் (B)</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">புதல்வர்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">வெங்கடாசலம் 1-1-1-1-1</span>
+            <span class="child-chip">இராமசாமி 1-1-1-1-2</span>
+            <span class="child-chip daughter">அம்மணி பெ.1-1-1-1-F1</span>
+            <span class="child-chip daughter">சிலம்பாத்தாள் பெ.1-1-1-1-F2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venkataasalam son -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">வெங்கடாசலம்</div>
+            <div class="card-id">ID: 1-1-1-1-1 • சோமசுந்தரம் மகன்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">புதல்வர்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">செல்லம் (A)</span>
+            <span class="child-chip daughter">அலமேலு (B)</span>
+          </div>
+          <div style="margin-top:1rem;">
+            <div class="children-label">அடுத்த தலைமுறை (அலமேலு வழி)</div>
+            <div class="children-chips">
+              <span class="child-chip">செல்லம் 1-1-1-1-1-F1</span>
+              <span class="child-chip">இராமசாமி 1-1-1-1-1-1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ramasami + Logambaal -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">இராமசாமி</div>
+            <div class="card-id">ID: 1-1-1-1-1-1 + லோகாம்பாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">புதல்வர்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">சாவித்திரி + நவந்தகிருஷ்ணன்</span>
+            <span class="child-chip">தியாகராஜன் + சுந்தரி</span>
+          </div>
+          <div style="margin-top:1rem;">
+            <div class="children-label">சாவித்திரி பிள்ளைகள்</div>
+            <div class="children-chips">
+              <span class="child-chip">சந்தானகோபால கிருஷ்ணன்</span>
+              <span class="child-chip daughter">மாலதி</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nallaveeran 1-1-1-4 -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">நல்லவீரப்பன் (குஞ்சரம்)</div>
+            <div class="card-id">ID: 1-1-1-4 + சொர்ணம்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">தகவல் இல்லை</div>
+        </div>
+      </div>
+
+      <!-- Maruthanayagam 1-1-1-5 -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">மருதநாயகம்</div>
+            <div class="card-id">ID: 1-1-1-5 + குப்பம்மாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மகன்கள்/மகள்கள் — பட்டியல் பக்கம் 1-1-1-5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 2: Kalyanasundara branch -->
+  <div id="g2" class="gen-content">
+    <div class="family-grid">
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">கல்யாணசுந்தர முதலியார்</div>
+            <div class="card-id">ID: 1-1-1-2 + ஆவுடையம்மாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">புதல்வர்கள் / புதல்விகள்</div>
+          <div class="children-chips">
+            <span class="child-chip">சுப்பராயன் 1-1-1-2-1</span>
+            <span class="child-chip daughter">லக்ஷ்மி பெ.1-1-1-2-F1</span>
+            <span class="child-chip daughter">நாகம்மாள் பெ.1-1-1-2-F2</span>
+            <span class="child-chip">கிருஷ்ணசாமி 1-1-1-2-2</span>
+            <span class="child-chip daughter">ருக்குமணி பெ.1-1-1-2-F3</span>
+            <span class="child-chip daughter">பார்வதி பெ.1-1-1-2-F4</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சுப்பராயன்</div>
+            <div class="card-id">ID: 1-1-1-2-1 + அன்னம்மாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">அலமேலு பெ.1-1-1-2-1-F1 + நெல்லியப்பன்</span>
+            <span class="child-chip daughter">சீதம்மா பெ.1-1-1-2-1-F2 + மாணிக்கம்</span>
+            <span class="child-chip">இராஜகோபால் 1-1-1-2-1-1</span>
+            <span class="child-chip">சீனிவாசன் 1-1-1-2-1-2 + கோகிலம்</span>
+            <span class="child-chip daughter">சரஸ்வதி 1-1-1-2-1-F3 + நமச்சிவாயம்</span>
+            <span class="child-chip">நாகம்மாள் 1-1-1-2-1-F4 + திருஞானசம்பந்தம்</span>
+            <span class="child-chip">கிருஷ்ணசாமி 1-1-1-2-1-3</span>
+            <span class="child-chip">இராமசாமி 1-1-1-2-1-4 + இராஜம்</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சீனிவாசன்</div>
+            <div class="card-id">ID: 1-1-1-2-1-2 + கோகிலம்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">லலிதா பெ.1-1-1-2-1-2-F1 + சுப்பிரமணியம்</span>
+            <span class="child-chip">இராதாகிருஷ்ணன் 1-1-1-2-1-2-1 + மீனாட்சி</span>
+            <span class="child-chip daughter">விஜயலட்சுமி 1-1-1-2-1-2-F2 + இராஜசேகரன்</span>
+            <span class="child-chip">முரளிகிருஷ்ணன் 1-1-1-2-1-2-2 + கலா</span>
+            <span class="child-chip">கோபு 1-1-1-2-1-2-3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">கிருஷ்ணசாமி</div>
+            <div class="card-id">ID: 1-1-1-2-2 + ரத்தினம்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">இலக்குமணன் (குப்புசாமி) 1-1-1-2-2-1 + அம்மணியம்மாள்</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 3: Mutthusundaram -->
+  <div id="g3" class="gen-content">
+    <div class="family-grid">
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">முத்துசுந்தரம்</div>
+            <div class="card-id">ID: 1-1-1-3 + பொன்னம்மாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">மாணிக்கம் 1-1-1-3-1 + குமுதவல்லி</span>
+            <span class="child-chip">சுப்பராயன் 1-1-1-3-2 + மயிலம்மாள்</span>
+            <span class="child-chip daughter">குஞ்சம்மாள் பெ.1-1-1-3-F1 + மாணிக்கம்</span>
+            <span class="child-chip daughter">தாயி பெ.1-1-1-3-F2 + முதுசாமி</span>
+            <span class="child-chip">மீனாக்ஷிசுந்தரம் 1-1-1-3-3 + மகம்மாத்தாள் (A)</span>
+            <span class="child-chip">இராமகிருஷ்ணன் 1-1-1-3-4 + மரகதம்</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">மாணிக்கம்</div>
+            <div class="card-id">ID: 1-1-1-3-2-1 + விமலா</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">சித்ரா பெ.1-1-1-3-2-1-F1 + கண்ணன்</span>
+            <span class="child-chip daughter">கௌதமி பெ.1-1-1-3-2-1-F2 + விவேகானந்தன்</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">வஜ்ரா</div>
+            <div class="card-id">ID: 1-1-1-3-2-2 + மீனாக்ஷி(A) / நாகலட்சுமி(B)</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">கௌதமி + விவேகானந்தன்</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">மீனாக்ஷிசுந்தரம்</div>
+            <div class="card-id">ID: 1-1-1-3-3 + மகம்மாத்தாள்(A) / வள்ளியம்மாள்(B)</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">சுப்ரத்தீனம் + சீனிவாசன்</span>
+            <span class="child-chip">ரகுபதி + கமலா</span>
+            <span class="child-chip daughter">சத்தியாமா</span>
+            <span class="child-chip daughter">மீனாக்ஷி பெ.1-2-1-1-4-1 + நடேசன்</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 4: Venkataasalam line -->
+  <div id="g4" class="gen-content">
+    <div class="family-grid">
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சோமசுந்தரம்சுந்தரம்</div>
+            <div class="card-id">ID: 1-1-1-1 + சொர்ணம் (B)</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள் (தொடர்ச்சி)</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">அமிர்தம் பெ.1-1-1-1-F3 + சண்முகசுந்தரம்</span>
+            <span class="child-chip">தங்கம் 1-1-1-1-F4 + இராஜரத்தினம்</span>
+            <span class="child-chip">இரத்தினசபாபதி 1-1-1-1-5 + காமாட்சி</span>
+          </div>
+          <div style="margin-top:1rem">
+            <div class="children-label">தங்கம் மக்கள்</div>
+            <div class="children-chips">
+              <span class="child-chip">ரத்தினவேலு + செல்லம்</span>
+              <span class="child-chip">திருஞானசம்பந்தம் + நாகம்மாள்</span>
+              <span class="child-chip">காமாட்சி + இரத்தினசபாபதி 1-1-1-1-7</span>
+              <span class="child-chip">குமாரசாமி + சரஸ்வதி</span>
+              <span class="child-chip">முதுவீரப்பன்</span>
+              <span class="child-chip daughter">ஜானகி</span>
+              <span class="child-chip daughter">வசந்தா</span>
+              <span class="child-chip daughter">விமலா</span>
+              <span class="child-chip">கல்யாணசுந்தரம் + காந்திமதி</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">கல்யாணசுந்தரம்</div>
+            <div class="card-id">+ காந்திமதி • கோயமுத்தூர் பிரிவு</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">மீனாட்சி</span>
+            <span class="child-chip">ரவி</span>
+            <span class="child-chip">பாஸ்கர்</span>
+          </div>
+          <div style="margin-top:0.8rem">
+            <div class="children-label">சதாசிவம் வழி</div>
+            <div class="children-chips">
+              <span class="child-chip">சதாசிவம் + மரகதம் பெ.1-2-1-5-2</span>
+              <span class="child-chip daughter">மதுராம்பாள் + சிவசுப்ரமணியம்</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">இரத்தினசபாபதி</div>
+            <div class="card-id">ID: 1-1-1-1-5 + காமாட்சி</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">சுந்தரி 1-1-1-1-5-f1 + சுப்பிரமணியம்</span>
+            <span class="child-chip daughter">உமா 1-1-1-1-5-f2 + தங்கவேலு சிங்காரம்</span>
+            <span class="child-chip">இராதாகிருஷ்ணன் 1-1-1-1-5-1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 5: Ramasami + Logambaal deep line -->
+  <div id="g5" class="gen-content">
+    <div class="family-grid">
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">இராமசாமி</div>
+            <div class="card-id">ID: 1-1-1-1-1-1 + லோகாம்பாள்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">சோமசுந்தரம் 1-1-1-1-1-1-1 + சுவர்ணகுமாரி</span>
+            <span class="child-chip">சிங்காரம் 1-1-1-1-1-1-2 + இலகுமி</span>
+            <span class="child-chip">சாமந்தம் 1-1-1-1-1-1-3 + சீனி</span>
+            <span class="child-chip">நடராஜன் 1-1-1-1-1-1-4 + சங்கரி</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சோமசுந்தரம்</div>
+            <div class="card-id">ID: 1-1-1-1-1-1-1 + சுவர்ணகுமாரி</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">வெங்கடாசலம் 1-1-1-1-1-1-1-1 + நீலா</span>
+            <span class="child-chip daughter">விஜயசங்கரி (அலமேலு) பெ. + சிவராமன்</span>
+          </div>
+          <div style="margin-top:0.8rem">
+            <div class="children-label">வெங்கடாசலம் மக்கள்</div>
+            <div class="children-chips">
+              <span class="child-chip daughter">கருணா சாகரி</span>
+              <span class="child-chip daughter">மயூரா</span>
+              <span class="child-chip">ஆஞ்சுரன் ராமசாமி</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சிங்காரம்</div>
+            <div class="card-id">ID: 1-1-1-1-1-1-2 + இலகுமி</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">சுபா பெ. + தியாகராஜன்</span>
+            <span class="child-chip">சீனிவாசன் 1-1-1-1-1-1-2-1 + வைஷலஜா</span>
+          </div>
+          <div style="margin-top:0.8rem">
+            <div class="children-label">சீனிவாசன் மக்கள்</div>
+            <div class="children-chips">
+              <span class="child-chip">சிவகுருநாதன் + ஸ்வாதி</span>
+              <span class="child-chip">அஸ்வின் + அஸ்விதா</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">நடராஜன்</div>
+            <div class="card-id">ID: 1-1-1-1-1-1-4 + சங்கரி</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">லோகராம் 1-1-1-1-1-1-4-1 + பிரியா</span>
+            <span class="child-chip">இராஜேஷ் 1-1-1-1-1-1-4-2 + காயத்திரி</span>
+          </div>
+          <div style="margin-top:0.8rem">
+            <div class="children-label">லோகராம் மக்கள்</div>
+            <div class="children-chips">
+              <span class="child-chip">ஆகாஷ் 1-1-1-1-1-1-4-1-1</span>
+              <span class="child-chip daughter">அர்த்தி பெ.1-1-1-1-1-1-4-1-F1</span>
+            </div>
+            <div style="margin-top:0.5rem">
+              <div class="children-label">இராஜேஷ் மக்கள்</div>
+              <div class="children-chips">
+                <span class="child-chip daughter">வார்வினி பெ.1-1-1-1-1-1-4-2-F1</span>
+                <span class="child-chip daughter">வீணா தாரணி பெ.1-1-1-1-1-1-4-2-F2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saamandam branch -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">சாமந்தம்</div>
+            <div class="card-id">ID: 1-1-1-1-1-1-3 + சீனி</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip daughter">மீனாக்ஷிசுந்தரம் 1-1-1-1-1-1-3-1 + உஷா</span>
+            <span class="child-chip daughter">லோகாம்பாள் பெ. + சரண்யன்</span>
+          </div>
+          <div style="margin-top:0.8rem">
+            <div class="children-label">மீனாக்ஷி மக்கள்</div>
+            <div class="children-chips">
+              <span class="child-chip">சபரீஷ் 1-1-1-1-1-1-3-1-1</span>
+              <span class="child-chip">ஸ்ரீநீதி 1-1-1-1-1-1-3-1-F1</span>
+            </div>
+            <div style="margin-top:0.5rem">
+              <div class="children-label">லோகாம்பாள் மக்கள்</div>
+              <div class="children-chips">
+                <span class="child-chip">சிவராம்</span>
+                <span class="child-chip">ஸ்ரீராம்</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vikram Visagan branch -->
+      <div class="family-card">
+        <div class="family-card-head">
+          <div class="card-avatar">👨</div>
+          <div class="card-head-info">
+            <div class="card-name">விஜயசங்கரி → மக்கள்</div>
+            <div class="card-id">பெ. 1-1-1-1-1-1-1-F1 + சிவராமன்</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="children-label">மக்கள்</div>
+          <div class="children-chips">
+            <span class="child-chip">விக்ரம் + ஸ்வேதா → ஸ்கந்தா</span>
+            <span class="child-chip">விசாகன்</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD MEMBER -->
+<section class="add-member-section" id="add-member">
+  <div class="section-header" style="padding-top:1rem">
+    <div class="section-eyebrow">குடும்பத்தினர் பதிவு</div>
+    <h2 class="section-title">உங்கள் பெயரை சேர்க்கவும்</h2>
+    <div class="section-rule"></div>
+    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.8rem;">குடும்பத்தினர் தங்கள் பெயரை இங்கே பதிவு செய்யலாம்</p>
+  </div>
+
+  <div class="add-member-form-wrap">
+    <div class="add-member-form-header">
+      <div class="form-icon">👤</div>
+      <div>
+        <h3>புதிய உறுப்பினர் பதிவு</h3>
+        <p>உங்கள் விவரங்களை பூர்த்தி செய்யுங்கள்</p>
+      </div>
+    </div>
+    <div class="add-member-form-body">
+      <div class="form-row">
+        <label class="form-label">முழு பெயர் (தமிழில் அல்லது ஆங்கிலத்தில்) <span class="req">*</span></label>
+        <input class="form-input" type="text" id="m-name" placeholder="உ.தா: இராமசாமி / Ramasamy" />
+      </div>
+      <div class="form-row-2col">
+        <div>
+          <label class="form-label">வம்சாவழி எண் (ID) <span class="req">*</span></label>
+          <input class="form-input" type="text" id="m-id" placeholder="உ.தா: 1-1-1-2-3" />
+        </div>
+        <div>
+          <label class="form-label">பிறப்பு ஆண்டு</label>
+          <input class="form-input" type="text" id="m-year" placeholder="உ.தா: 1975" />
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="form-label">தந்தையின் பெயர்</label>
+        <input class="form-input" type="text" id="m-father" placeholder="தந்தையின் பெயர்" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">தாயின் பெயர்</label>
+        <input class="form-input" type="text" id="m-mother" placeholder="தாயின் பெயர்" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">மனைவி / கணவர் பெயர்</label>
+        <input class="form-input" type="text" id="m-spouse" placeholder="திருமணமானவர்கள் மட்டும்" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">குழந்தைகளின் பெயர்கள்</label>
+        <input class="form-input" type="text" id="m-children" placeholder="பெயர்களை கமாவால் பிரிக்கவும்: ராம், சீதா" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">தற்போதைய இருப்பிடம்</label>
+        <input class="form-input" type="text" id="m-city" placeholder="நகரம், மாவட்டம்" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">கூடுதல் குறிப்புகள்</label>
+        <textarea class="form-textarea" id="m-note" placeholder="வேறு ஏதாவது தெரிவிக்க விரும்புகிறீர்களா?"></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitMember()">✚ வம்சாவழியில் பதிவு செய்யுங்கள்</button>
+      <div class="form-success" id="form-success">
+        <div class="success-icon">🎉</div>
+        <p><strong>வாழ்த்துக்கள்!</strong> உங்கள் பெயர் வம்சாவழியில் சேர்க்கப்பட்டது.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="registered-members-wrap">
+    <div class="registered-title">📋 பதிவான குடும்பத்தினர் <span id="reg-count" style="background:var(--crimson);color:#fff;border-radius:20px;padding:0.1rem 0.6rem;font-size:0.8rem;margin-left:0.5rem;font-family:'Cinzel',serif;"></span></div>
+    <div id="members-list"></div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section class="search-section" id="search">
+  <div class="section-header" style="padding-top:1rem">
+    <div class="section-eyebrow">குடும்பத்தினரை கண்டறியுங்கள்</div>
+    <h2 class="section-title">தேடல்</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" type="text" id="search-box" placeholder="பெயர் தேடுக... (e.g. இராமசாமி, சுப்பராயன்)" oninput="doSearch(this.value)">
+  </div>
+  <div id="search-results"></div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="timeline">
+  <div class="section-header">
+    <div class="section-eyebrow">வம்சத்தின் பாதை</div>
+    <h2 class="section-title">தலைமுறை கோட்டு விளக்கம்</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">மூல பூர்விகர்</div>
+      <div class="timeline-name">நல்லவீரப்ப முதலியார்</div>
+      <div class="timeline-desc">தொண்டை மண்டல சைவ முதன்மையார். தமிழ்நாடு, கோயமுத்தூர் மாவட்டம், ஆனைமலை வட்டம், தென்சித்தூரில் கி.பி. ~1700களில் வாழ்ந்தவர். இவரது வழித்தோன்றல்களே இந்த வம்சாவழி.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">முதல் தலைமுறை</div>
+      <div class="timeline-name">சுப்பராயன் (1-1) • வெங்கடாசலம் (1-2) • அரசூர் (1-3)</div>
+      <div class="timeline-desc">மூன்று புதல்வர்கள். சுப்பராயன் வழித்தோன்றல்கள் மிகவும் பரவியுள்ளனர். வெங்கடாசலம் வழி ஆறு புதல்வர்கள் (1-2-1 முதல் 1-2-5 வரை).</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">இரண்டாம் தலைமுறை</div>
+      <div class="timeline-name">இராமசாமி (1-1-1) + அங்காத்தை</div>
+      <div class="timeline-desc">ஐந்து புதல்வர்கள் — சோமசுந்தரம், கல்யாணசுந்தரம், முத்துசுந்தரம், நல்லவீரப்பன் (குஞ்சரம்), மருதநாயகம். இவர்களின் சந்ததிகள் பல ஊர்களில் பரவியுள்ளனர்.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">மூன்றாம் தலைமுறை</div>
+      <div class="timeline-name">கல்யாணசுந்தர முதலியார் (1-1-1-2) + ஆவுடையம்மாள்</div>
+      <div class="timeline-desc">ஆறு மக்கள் — சுப்பராயன், லக்ஷ்மி, நாகம்மாள், கிருஷ்ணசாமி, ருக்குமணி, பார்வதி. கல்யாணசுந்தரம் வழி பல பரவிய சாகைகள்.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">நான்காம் தலைமுறை</div>
+      <div class="timeline-name">இராமசாமி (1-1-1-1-1-1) + லோகாம்பாள்</div>
+      <div class="timeline-desc">சோமசுந்தரம், சிங்காரம், சாமந்தம், நடராஜன் ஆகிய நால்வர். இவர்களது மக்கள் பல நகரங்களில் குடியேறியுள்ளனர்.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-gen">ஐந்தாம் – ஏழாம் தலைமுறை</div>
+      <div class="timeline-name">நூற்றுக்கணக்கான உறவினர்கள்</div>
+      <div class="timeline-desc">1923-2023 நூற்றாண்டு விழாவை ஒட்டி, ஸ்ரீ மீனாட்சி சுந்தரேஸ்வரர் கோவில் தர்ம பரிபாலன சபை இந்த வம்சாவழியை வெளியிட்டுள்ளது. 300-க்கும் மேல் குடும்பத்தினர் இந்த வம்சத்தைச் சேர்ந்தவர்கள்.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section" id="stats">
+  <div style="text-align:center;margin-bottom:2rem;">
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.2em;color:rgba(201,150,42,0.7);margin-bottom:0.5rem;">வம்சாவழி புள்ளிவிவரம்</div>
+    <h2 style="font-family:'Noto Serif Tamil',serif;font-size:1.8rem;color:#fff;">எண்ணிக்கை சாரம்</h2>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-num">~1700</span>
+      <span class="stat-lbl">தொடக்க ஆண்டு</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">7+</span>
+      <span class="stat-lbl">தலைமுறைகள்</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">3</span>
+      <span class="stat-lbl">முதல் தலைமுறை புதல்வர்கள்</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">300+</span>
+      <span class="stat-lbl">குடும்பத்தினர்</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">26</span>
+      <span class="stat-lbl">PDF தாள்கள்</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">100</span>
+      <span class="stat-lbl">நூற்றாண்டு ஆண்டுகள்</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">ௐ நல்லவீரப்ப முதலியார் வம்சாவழி ௐ</div>
+  <p>
+    ஸ்ரீ மீனாட்சி சுந்தரேஸ்வரர் கோவில் தர்ம பரிபாலன சபை வெளியீடு<br>
+    தென்சித்தூர் • 1984–2023 • நூற்றாண்டு விழா சிறப்பிதழ்<br>
+    <br>
+    தலைவர்: C.K.கல்யாணசுந்தரம் | செயலாளர்: V.A.கிருஷ்ணகுமார், S.சீனிவாசன்
+  </p>
+</footer>
+
+<script>
+// ── ADD MEMBER — Firebase Realtime Database ──
+// 🔧 SETUP: Replace the value below with YOUR Firebase Database URL
+// Example: "https://your-project-default-rtdb.firebaseio.com"
+const FIREBASE_URL = "YOUR_FIREBASE_DATABASE_URL";
+const DB_PATH      = "/vamsavali_members.json";
+
+function memberCard(m) {
+  return `
+    <div class="member-entry">
+      <div class="member-entry-avatar">👤</div>
+      <div class="member-entry-info">
+        <div class="member-entry-name">${m.name}</div>
+        <div class="member-entry-meta">
+          ${m.id       ? `<strong>ID:</strong> ${m.id}` : ''}
+          ${m.year     ? ` • பிறப்பு: ${m.year}` : ''}
+          ${m.father   ? ` • தந்தை: ${m.father}` : ''}
+          ${m.mother   ? ` • தாய்: ${m.mother}` : ''}
+          ${m.spouse   ? `<br>♥ ${m.spouse}` : ''}
+          ${m.children ? `<br>மக்கள்: ${m.children}` : ''}
+          ${m.city     ? `<br>📍 ${m.city}` : ''}
+          ${m.addedOn  ? `<br><small style="opacity:0.6">சேர்க்கப்பட்ட தேதி: ${m.addedOn}</small>` : ''}
+        </div>
+        ${m.note ? `<div class="member-entry-note">${m.note}</div>` : ''}
+      </div>
+    </div>`;
+}
+
+function showSetupBanner() {
+  const el = document.getElementById('members-list');
+  el.innerHTML = `
+    <div style="background:#FFF8E1;border:2px solid #FFC107;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:1rem;">
+      <div style="font-weight:700;color:#E65100;margin-bottom:0.6rem;">⚙️ Firebase Setup தேவை</div>
+      <div style="font-size:0.85rem;color:#5D4037;line-height:1.7;">
+        குடும்பத்தினர் எல்லோரும் share செய்ய கீழே உள்ள steps பின்பற்றுங்கள்:<br><br>
+        <strong>1.</strong> <a href="https://console.firebase.google.com" target="_blank" style="color:#1565C0;">console.firebase.google.com</a> → New project → "nallaveeraappa-vamsavali"<br>
+        <strong>2.</strong> Build → Realtime Database → Create database → <em>Test mode</em> → Enable<br>
+        <strong>3.</strong> Database URL copy செய்யுங்கள் (உதாரணம்: <code>https://nallaveeraappa-default-rtdb.firebaseio.com</code>)<br>
+        <strong>4.</strong> இந்த HTML file-ல் <code>YOUR_FIREBASE_DATABASE_URL</code> என்பதை அந்த URL-ஆல் மாற்றுங்கள்<br>
+        <strong>5.</strong> GitHub-ல் upload செய்யுங்கள் — முடிந்தது! 🎉
+      </div>
+    </div>`;
+}
+
+async function loadAndRender() {
+  const el = document.getElementById('members-list');
+  if (FIREBASE_URL === "YOUR_FIREBASE_DATABASE_URL") { showSetupBanner(); return; }
+  el.innerHTML = '<div class="no-members-msg">⏳ தகவல் ஏற்றப்படுகிறது...</div>';
+  try {
+    const res  = await fetch(FIREBASE_URL + DB_PATH);
+    const data = await res.json();
+    const list = data ? Object.values(data) : [];
+    if (!list.length) {
+      el.innerHTML = '<div class="no-members-msg">இன்னும் யாரும் பதிவு செய்யவில்லை. முதலில் உங்கள் பெயரை சேர்க்கவும்! 🌳</div>';
+      return;
+    }
+    document.getElementById('reg-count').textContent = list.length;
+    el.innerHTML = list.slice().reverse().map(memberCard).join('');
+    list.forEach(m => {
+      if (!members.find(x => x.name === m.name && x.id === m.id)) {
+        members.push({ name: m.name, id: m.id, role: m.father ? `${m.father} மகன்/மகள்` : 'குடும்ப உறுப்பினர்' });
+      }
+    });
+  } catch(e) {
+    el.innerHTML = '<div class="no-members-msg" style="color:#c00;">❌ இணைய பிழை. Firebase URL சரியாக உள்ளதா என்று சரிபாருங்கள்.</div>';
+  }
+}
+
+async function submitMember() {
+  const name = document.getElementById('m-name').value.trim();
+  const id   = document.getElementById('m-id').value.trim();
+  if (!name) { alert('பெயர் கட்டாயம் தேவை!'); return; }
+  if (!id)   { alert('வம்சாவழி எண் (ID) கட்டாயம் தேவை!'); return; }
+  if (FIREBASE_URL === "YOUR_FIREBASE_DATABASE_URL") { alert('முதலில் Firebase URL set செய்யுங்கள்!'); return; }
+
+  const btn = document.querySelector('.submit-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ சேமிக்கப்படுகிறது...';
+
+  const entry = {
+    name, id,
+    year:     document.getElementById('m-year').value.trim(),
+    father:   document.getElementById('m-father').value.trim(),
+    mother:   document.getElementById('m-mother').value.trim(),
+    spouse:   document.getElementById('m-spouse').value.trim(),
+    children: document.getElementById('m-children').value.trim(),
+    city:     document.getElementById('m-city').value.trim(),
+    note:     document.getElementById('m-note').value.trim(),
+    addedOn:  new Date().toLocaleDateString('ta-IN')
+  };
+
+  try {
+    // POST to Firebase — creates a unique key for each entry
+    const res = await fetch(FIREBASE_URL + DB_PATH.replace('.json','') + '.json', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(entry)
+    });
+    if (!res.ok) throw new Error('Firebase error');
+    ['m-name','m-id','m-year','m-father','m-mother','m-spouse','m-children','m-city','m-note']
+      .forEach(fid => { document.getElementById(fid).value = ''; });
+    document.getElementById('form-success').style.display = 'block';
+    setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 3500);
+    await loadAndRender();
+  } catch(err) {
+    alert('சேமிக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.');
+  }
+  btn.disabled = false;
+  btn.textContent = '✚ வம்சாவழியில் பதிவு செய்யுங்கள்';
+}
+
+// Load on page ready
+document.addEventListener('DOMContentLoaded', loadAndRender);
+
+function showGen(id) {
+  document.querySelectorAll('.gen-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.gen-tab').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Search data
+const members = [
+  { name: "நல்லவீரப்ப முதலியார்", id: "1", role: "மூல பூர்விகர்" },
+  { name: "சுப்பராயன்", id: "1-1", role: "நல்லவீரப்பர் மகன்" },
+  { name: "வெங்கடாசலம்", id: "1-2", role: "நல்லவீரப்பர் மகன்" },
+  { name: "அரசூர்", id: "பெ.1-3", role: "நல்லவீரப்பர் மகள்" },
+  { name: "இராமசாமி", id: "1-1-1", role: "சுப்பராயன் மகன்" },
+  { name: "சோமசுந்தரம்", id: "1-1-1-1", role: "இராமசாமி மகன்" },
+  { name: "கல்யாணசுந்தர முதலியார்", id: "1-1-1-2", role: "இராமசாமி மகன்" },
+  { name: "முத்துசுந்தரம்", id: "1-1-1-3", role: "இராமசாமி மகன்" },
+  { name: "நல்லவீரப்பன் (குஞ்சரம்)", id: "1-1-1-4", role: "இராமசாமி மகன்" },
+  { name: "மருதநாயகம்", id: "1-1-1-5", role: "இராமசாமி மகன்" },
+  { name: "வெங்கடாசலம்", id: "1-1-1-1-1", role: "சோமசுந்தரம் மகன்" },
+  { name: "இராமசாமி", id: "1-1-1-1-2", role: "சோமசுந்தரம் மகன்" },
+  { name: "இராமசாமி", id: "1-1-1-1-1-1", role: "சோமசுந்தரம் → வெங்கடாசலம் வழி" },
+  { name: "லோகாம்பாள்", id: "1-1-1-1-1-1 மனைவி", role: "இராமசாமி மனைவி" },
+  { name: "சுப்பராயன்", id: "1-1-1-2-1", role: "கல்யாணசுந்தரம் மகன்" },
+  { name: "கிருஷ்ணசாமி", id: "1-1-1-2-2", role: "கல்யாணசுந்தரம் மகன்" },
+  { name: "சீனிவாசன்", id: "1-1-1-2-1-2", role: "சுப்பராயன் மகன்" },
+  { name: "இலக்குமணன் (குப்புசாமி)", id: "1-1-1-2-2-1", role: "கிருஷ்ணசாமி மகன்" },
+  { name: "மீனாக்ஷிசுந்தரம்", id: "1-1-1-3-3", role: "முத்துசுந்தரம் மகன்" },
+  { name: "மாணிக்கம்", id: "1-1-1-3-1", role: "முத்துசுந்தரம் மகன்" },
+  { name: "சோமசுந்தரம்", id: "1-1-1-1-1-1-1", role: "இராமசாமி மகன்" },
+  { name: "சிங்காரம்", id: "1-1-1-1-1-1-2", role: "இராமசாமி மகன்" },
+  { name: "சாமந்தம்", id: "1-1-1-1-1-1-3", role: "இராமசாமி மகன்" },
+  { name: "நடராஜன்", id: "1-1-1-1-1-1-4", role: "இராமசாமி மகன்" },
+  { name: "லோகராம்", id: "1-1-1-1-1-1-4-1", role: "நடராஜன் மகன்" },
+  { name: "இராஜேஷ்", id: "1-1-1-1-1-1-4-2", role: "நடராஜன் மகன்" },
+  { name: "ஆகாஷ்", id: "1-1-1-1-1-1-4-1-1", role: "லோகராம் மகன்" },
+  { name: "வெங்கடாசலம்", id: "1-1-1-1-1-1-1-1", role: "சோமசுந்தரம் மகன்" },
+  { name: "நல்ல வீரப்பன்", id: "1-2-1", role: "வெங்கடாசலம் மகன்" },
+  { name: "இராமச்சந்திரன்", id: "1-2-2", role: "வெங்கடாசலம் மகன்" },
+  { name: "இலட்சுமி நாராயணன்", id: "1-2-3", role: "வெங்கடாசலம் மகன்" },
+  { name: "சுப்பராயன்", id: "1-2-4", role: "வெங்கடாசலம் மகன்" },
+  { name: "மீனாக்ஷிசுந்தரம்", id: "1-2-5", role: "வெங்கடாசலம் மகன்" },
+  { name: "அங்காத்தை (அங்கயர்ககண்ணி)", id: "1-1-1 மனைவி", role: "இராமசாமி மனைவி" },
+  { name: "ஆவுடையம்மாள்", id: "1-1-1-2 மனைவி", role: "கல்யாணசுந்தரம் மனைவி" },
+  { name: "பொன்னம்மாள்", id: "1-1-1-3 மனைவி", role: "முத்துசுந்தரம் மனைவி" },
+  { name: "காயத்திரி", id: "1-1-1-1-1-1-4-2 மனைவி", role: "இராஜேஷ் மனைவி" },
+  { name: "பிரியா", id: "1-1-1-1-1-1-4-1 மனைவி", role: "லோகராம் மனைவி" },
+  { name: "C.K.கல்யாணசுந்தரம்", id: "தலைவர்", role: "வம்சாவழி குழு தலைவர்" },
+  { name: "V.A.கிருஷ்ணகுமார்", id: "செயலாளர்", role: "வம்சாவழி குழு செயலாளர்" }
+];
+
+function doSearch(query) {
+  const res = document.getElementById('search-results');
+  if (!query.trim()) { res.innerHTML = ''; return; }
+  const q = query.toLowerCase();
+  const found = members.filter(m =>
+    m.name.toLowerCase().includes(q) ||
+    m.id.toLowerCase().includes(q) ||
+    m.role.toLowerCase().includes(q)
+  );
+  if (!found.length) {
+    res.innerHTML = '<div class="search-result-item"><span class="r-name">கண்டுபிடிக்கவில்லை</span></div>';
+    return;
+  }
+  res.innerHTML = found.slice(0, 10).map(m => `
+    <div class="search-result-item">
+      <div class="r-name">${m.name}</div>
+      <div class="r-id">ID: ${m.id} • ${m.role}</div>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>
